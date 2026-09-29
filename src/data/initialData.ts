@@ -1,0 +1,543 @@
+import { NoteItem, SubjectMeta, StudyTip, DailyQuestion, User } from '../types';
+
+export const SUBJECTS: SubjectMeta[] = [
+  {
+    id: 'physics',
+    name: 'Physics',
+    code: 'PHY-54',
+    tagline: 'Derivations, Formulas & Board Numericals',
+    image: '/src/assets/images/subject_physics_1790694771590.jpg',
+    accentColor: '#2563EB',
+    chaptersCount: 16,
+  },
+  {
+    id: 'chemistry',
+    name: 'Chemistry',
+    code: 'CHEM-55',
+    tagline: 'Physical, Inorganic & Organic Reactions',
+    image: '/src/assets/images/subject_chemistry_1790694784783.jpg',
+    accentColor: '#7C3AED',
+    chaptersCount: 16,
+  },
+  {
+    id: 'mathematics',
+    name: 'Mathematics',
+    code: 'MATH-40',
+    tagline: 'Theorems, Step Solutions & Board PYQs',
+    image: '/src/assets/images/hero_sbw_study_1790694754398.jpg',
+    accentColor: '#0284C7',
+    chaptersCount: 15,
+  },
+  {
+    id: 'biology',
+    name: 'Biology',
+    code: 'BIO-56',
+    tagline: 'Botany, Zoology & Well-Labeled Diagrams',
+    image: '/src/assets/images/subject_biology_1790694797935.jpg',
+    accentColor: '#059669',
+    chaptersCount: 15,
+  },
+];
+
+export const INITIAL_STUDY_TIPS: StudyTip[] = [
+  {
+    id: 'tip-1',
+    title: 'HSC Numericals Step-Marking Rule',
+    tip: 'In Maharashtra State Board Physics and Chemistry, 1 mark is allocated solely for writing given data with SI units, 1 mark for formula substitution, and 1 mark for the final answer with units using log calculations.',
+    subject: 'Physics & Chemistry',
+  },
+  {
+    id: 'tip-2',
+    title: 'Diagram Labeling Precision in Biology',
+    tip: 'Board examiners penalize unruled lead lines in diagrams. Always draw anatomical sketches in pencil on the left and align horizontal labels in neat ink on the right with arrowheads touching structures.',
+    subject: 'Biology',
+  },
+  {
+    id: 'tip-3',
+    title: 'Maths Section D Theorem Mastery',
+    tip: 'Integration by parts theorem, properties of definite integrals, and acute angle between pair of lines appear in 85% of board question papers. Write step reasons in brackets on every line.',
+    subject: 'Mathematics',
+  },
+];
+
+export const INITIAL_DAILY_QUESTION: DailyQuestion = {
+  id: 'dq-hsc-2026',
+  subject: 'physics',
+  chapter: 'Rotational Dynamics',
+  marks: 3,
+  boardYear: 'HSC Board March 2023 & July 2022',
+  question: 'Derive an expression for the most safe speed of a vehicle driving along a curved banked road, neglecting friction between tires and road surface.',
+  solution: `1. Diagram: Vehicle of mass m moving on a road banked at angle θ with radius of curve r.
+2. Forces acting:
+   a) Weight 'mg' acting vertically downwards.
+   b) Normal reaction 'N' perpendicular to the banked road.
+3. Resolving Normal Reaction:
+   • Vertical component N cos θ balances the weight:
+     N cos θ = mg  --- [Equation (1)]
+   • Horizontal component N sin θ provides the necessary centripetal force:
+     N sin θ = (m · v²) / r  --- [Equation (2)]
+4. Dividing Equation (2) by (1):
+   (N sin θ) / (N cos θ) = [(m · v²) / r] / [mg]
+   tan θ = v² / (r · g)
+5. Therefore, the most safe speed (optimum speed) is:
+   v_safe = √(r · g · tan θ)
+   
+*Note: Speed is independent of the mass 'm' of the vehicle.*`,
+};
+
+export const INITIAL_NOTES: NoteItem[] = [
+  {
+    id: 'note-phy-01',
+    title: 'Rotational Dynamics: Complete Board Revision & Derivations',
+    class: '12',
+    subject: 'physics',
+    chapter: '01. Rotational Dynamics',
+    category: 'notes',
+    description: 'Crisp hand-annotated Maharashtra HSC Board notes covering Banking of roads, Vertical circular motion, Conical pendulum, and Theorem of Parallel & Perpendicular Axes with past 7-year solved derivations.',
+    pdfUrl: 'https://storage.googleapis.com/sbw-notes/hsc12_physics_ch01_rotational_dynamics.pdf',
+    thumbnailUrl: '/src/assets/images/subject_physics_1790694771590.jpg',
+    isPremium: false,
+    pages: 14,
+    isPublished: true,
+    createdAt: '2026-03-01',
+    updatedAt: '2026-03-15',
+    readTimeMinutes: 18,
+    downloadsCount: 1420,
+    sampleContent: {
+      keyPoints: [
+        'Characteristics of Circular Motion: Centripetal (real) vs Centrifugal (pseudo) force differences.',
+        'Vehicle on Horizontal Curved Road: Maximum safe speed v_max = √(μ · r · g).',
+        'Banked Road without Friction: v = √(r · g · tan θ); with friction: upper & lower speed limits.',
+        'Conical Pendulum Period: T = 2π · √(L · cos θ / g).',
+        'Vertical Circular Motion: Tension difference at bottom & top is exactly 6mg (T_B - T_T = 6mg).',
+        'Kinematic Equations of Rotational Motion analogous to linear equations.',
+      ],
+      formulaeSheet: [
+        'Safe speed (unbanked): v = √(μ · r · g)',
+        'Optimum banking speed: v_0 = √(r · g · tan θ)',
+        'Moment of Inertia: I = ∑ m_i · r_i² = ∫ r² dm',
+        'Parallel Axis Theorem: I_O = I_C + M · h²',
+        'Perpendicular Axis Theorem: I_Z = I_X + I_Y (plane lamina)',
+        'Torque: τ = I · α = r × F',
+        'Angular Momentum: L = I · ω = r × p',
+      ],
+      pyqExamHits: [
+        { year: 'March 2024', question: 'State Kepler’s laws and calculate kinetic energy of rolling disc.', marks: 3 },
+        { year: 'July 2023', question: 'Derive expression for tension at lowest point in vertical circle.', marks: 3 },
+        { year: 'March 2022', question: 'Distinguish between centripetal and centrifugal force.', marks: 2 },
+      ],
+      summaryNotes: `Rotational Dynamics consolidates both circular motion and rigid body rotation. In the Maharashtra HSC Board examination, Chapter 1 typically carries 5 marks without options and 7 marks with options. 
+
+Students should focus specifically on state-and-prove questions for the Principle of Parallel Axes (I_o = I_c + M h²) and the conical pendulum time period derivation.
+
+Always check units in numericals: convert rpm into rad/s by multiplying with (2π / 60). In rolling motion questions, total kinetic energy is always the sum of translational KE (1/2 M v²) and rotational KE (1/2 I ω²).`,
+      practiceMcqs: [
+        {
+          id: 'mcq-1',
+          question: 'A body performs uniform circular motion. The angle between its instantaneous velocity and centripetal acceleration is:',
+          options: ['0°', '45°', '90°', '180°'],
+          answerIndex: 2,
+          explanation: 'In UCM, linear velocity is tangential and centripetal acceleration is radial (directed towards center), making them perpendicular (90°).',
+        },
+        {
+          id: 'mcq-2',
+          question: 'The minimum velocity required at the lowest point to complete a vertical circular loop of radius r is:',
+          options: ['√(r·g)', '√(3·r·g)', '√(5·r·g)', '2√(r·g)'],
+          answerIndex: 2,
+          explanation: 'At the bottom of vertical circle, v_min = √(5gr) to maintain positive tension at highest point (where v_top ≥ √(gr)).',
+        },
+      ],
+    },
+  },
+  {
+    id: 'note-phy-02',
+    title: 'Mechanical Properties of Fluids: Surface Tension & Viscosity Mastery',
+    class: '12',
+    subject: 'physics',
+    chapter: '02. Mechanical Properties of Fluids',
+    category: 'important_questions',
+    description: 'HSC Board scoring blueprint: Laplace’s law for spherical membrane, Terminal velocity derivation via Stokes Law, and Capillary rise formula with step-wise marks distribution.',
+    pdfUrl: 'https://storage.googleapis.com/sbw-notes/hsc12_physics_ch02_fluids.pdf',
+    thumbnailUrl: '/src/assets/images/subject_physics_1790694771590.jpg',
+    isPremium: true,
+    pages: 18,
+    isPublished: true,
+    createdAt: '2026-03-04',
+    updatedAt: '2026-03-18',
+    readTimeMinutes: 24,
+    downloadsCount: 980,
+    sampleContent: {
+      keyPoints: [
+        'Pascal’s Law and hydraulic lift mechanical advantage.',
+        'Surface Tension: T = F / L = dW / dA.',
+        'Laplace’s law for liquid drop: ΔP = 2T / r; for soap bubble: ΔP = 4T / r.',
+        'Angle of contact: Acute for water-glass (concave meniscus), obtuse for mercury-glass (convex).',
+        'Capillary Rise: h = (2T cos θ) / (r · ρ · g).',
+        'Poiseuille’s formula & Stokes law: F_v = 6πηrv.',
+        'Terminal velocity: v_t = 2/9 · [r² (ρ - σ) g] / η.',
+      ],
+      formulaeSheet: [
+        'Absolute Pressure: P = P_0 + hρg',
+        'Surface energy: W = T · ΔA',
+        'Soap bubble excess pressure: P_i - P_o = 4T / r',
+        'Capillary height: h = (2T cos θ) / (r · ρ · g)',
+        'Terminal speed: v_t = 2r²(ρ - σ)g / (9η)',
+        'Bernoulli Equation: P + 1/2 ρv² + ρgh = constant',
+      ],
+      pyqExamHits: [
+        { year: 'March 2024', question: 'Derive Laplace’s law for excess pressure inside a liquid drop.', marks: 3 },
+        { year: 'March 2023', question: 'Define coefficient of viscosity and state Stokes’ law.', marks: 2 },
+      ],
+      summaryNotes: `Fluids is one of the most consistent scoring chapters in HSC Physics. The board questions adhere strictly to textbook derivations:
+1. Laplace’s law using work done in blowing a bubble.
+2. Derivation of terminal velocity by equating viscous drag + buoyant force to gravity.
+3. Capillary rise method using pressure difference across curved meniscus.`,
+      practiceMcqs: [
+        {
+          id: 'mcq-fl-1',
+          question: 'The excess pressure inside a soap bubble of radius R and surface tension T is:',
+          options: ['T / R', '2T / R', '4T / R', '8T / R'],
+          answerIndex: 2,
+          explanation: 'A soap bubble has two free surfaces in contact with air (inner and outer), hence ΔP = 2 × (2T / R) = 4T / R.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'note-chem-01',
+    title: 'Solid State: Unit Cells, Packing Efficiency & Crystal Defects',
+    class: '12',
+    subject: 'chemistry',
+    chapter: '01. Solid State',
+    category: 'notes',
+    description: 'Detailed high-yield board notes covering 7 crystal systems, Bragg’s equation, density formula numericals, Schottky and Frenkel defects with color-coded crystal diagrams.',
+    pdfUrl: 'https://storage.googleapis.com/sbw-notes/hsc12_chem_ch01_solid_state.pdf',
+    thumbnailUrl: '/src/assets/images/subject_chemistry_1790694784783.jpg',
+    isPremium: false,
+    pages: 12,
+    isPublished: true,
+    createdAt: '2026-03-02',
+    updatedAt: '2026-03-12',
+    readTimeMinutes: 16,
+    downloadsCount: 1640,
+    sampleContent: {
+      keyPoints: [
+        'Crystalline vs Amorphous: Anisotropic vs Isotropic nature, sharp melting points.',
+        'Types of Crystalline Solids: Molecular, Ionic, Metallic, and Covalent network solids.',
+        'Bravais Lattices: 14 types across 7 crystal systems.',
+        'Packing Efficiency: SCC = 52.4%, BCC = 68%, FCC/HCP = 74%.',
+        'Point Defects: Vacancy, Interstitial, Schottky (density decreases), Frenkel (density constant).',
+        'Non-stoichiometric Defects: Metal excess (F-centers impart color), Metal deficiency.',
+        'Electrical properties: Conductors, Semiconductors (n-type and p-type doping).',
+      ],
+      formulaeSheet: [
+        'Density of unit cell: ρ = (z · M) / (a³ · N_A)',
+        'SCC: r = a / 2, Coordination Number = 6',
+        'BCC: r = (√3 · a) / 4, Coordination Number = 8',
+        'FCC: r = a / (2√2), Coordination Number = 12',
+        'Number of atoms in FCC = 4, BCC = 2, SCC = 1',
+      ],
+      pyqExamHits: [
+        { year: 'March 2024', question: 'Calculate density of silver given FCC unit cell edge length 408.6 pm.', marks: 3 },
+        { year: 'July 2023', question: 'Distinguish between Schottky defect and Frenkel defect.', marks: 2 },
+        { year: 'March 2022', question: 'Derive packing efficiency in Face-Centered Cubic (FCC) lattice.', marks: 3 },
+      ],
+      summaryNotes: `Solid State provides predictable marks. A 3-mark numerical from this chapter appears in almost every board exam based on the unit cell density formula: ρ = (z · M) / (a³ · N_A). Always convert edge length 'a' from picometers (pm) to centimeters (1 pm = 10⁻¹⁰ cm) before cubing!`,
+      practiceMcqs: [
+        {
+          id: 'mcq-ss-1',
+          question: 'The coordination number of an atom in a Body-Centered Cubic (BCC) crystal lattice is:',
+          options: ['4', '6', '8', '12'],
+          answerIndex: 2,
+          explanation: 'In BCC, the central body atom is surrounded and touched by 8 corner atoms.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'note-chem-02',
+    title: 'Chemical Thermodynamics: Laws, Hess Law & Gibbs Free Energy',
+    class: '12',
+    subject: 'chemistry',
+    chapter: '04. Chemical Thermodynamics',
+    category: 'pyq',
+    description: 'Last 10 Years Solved HSC Questions: Maximum work done derivation, ΔH vs ΔU relationship, spontaneity criteria, and thermochemical numericals step solutions.',
+    pdfUrl: 'https://storage.googleapis.com/sbw-notes/hsc12_chem_ch04_thermo.pdf',
+    thumbnailUrl: '/src/assets/images/subject_chemistry_1790694784783.jpg',
+    isPremium: true,
+    pages: 20,
+    isPublished: true,
+    createdAt: '2026-03-08',
+    updatedAt: '2026-03-22',
+    readTimeMinutes: 28,
+    downloadsCount: 1120,
+    sampleContent: {
+      keyPoints: [
+        'Types of systems: Open, Closed, Isolated.',
+        'Extensive vs Intensive properties: Mass & volume vs density & boiling point.',
+        'First Law of Thermodynamics: ΔU = q + W; isothermal, adiabatic, isobaric, isochoric.',
+        'Work done in isothermal reversible expansion: W_max = -2.303 nRT log₁₀(V₂/V₁).',
+        'Enthalpy: H = U + PV; ΔH = ΔU + Δn_g · R · T.',
+        'Hess’s Law of Constant Heat Summation and its thermochemical applications.',
+        'Second & Third Law: Entropy ΔS = q_rev / T; Gibbs energy ΔG = ΔH - TΔS; Spontaneity when ΔG < 0.',
+      ],
+      formulaeSheet: [
+        'W_max = -2.303 nRT log₁₀ (P₁ / P₂)',
+        'ΔH = ΔU + Δn_g · R · T',
+        'ΔS_total = ΔS_system + ΔS_surroundings > 0',
+        'ΔG° = -2.303 RT log₁₀ K',
+        'Standard Enthalpy of Reaction: Δ_r H° = ∑ Δ_f H°(products) - ∑ Δ_f H°(reactants)',
+      ],
+      pyqExamHits: [
+        { year: 'March 2024', question: 'Derive expression for maximum work done during isothermal reversible expansion of an ideal gas.', marks: 4 },
+        { year: 'March 2023', question: 'State Hess’s Law and write its applications.', marks: 2 },
+      ],
+      summaryNotes: `Chemical Thermodynamics is heavily weighted (6 to 8 marks). The derivation of W_max is one of the most frequently asked 4-mark questions in Section D. Remember the IUPAC sign convention: work done BY system on surroundings is negative (-W), and heat absorbed by system is positive (+q).`,
+      practiceMcqs: [
+        {
+          id: 'mcq-th-1',
+          question: 'For an isothermal reversible expansion of an ideal gas, the change in internal energy ΔU is:',
+          options: ['Positive', 'Negative', 'Zero', 'Infinite'],
+          answerIndex: 2,
+          explanation: 'Internal energy of an ideal gas depends solely on temperature. Since temperature is constant in an isothermal process (ΔT = 0), ΔU = 0.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'note-math-01',
+    title: 'Mathematical Logic: Truth Tables, Duals & Circuit Simplification',
+    class: '12',
+    subject: 'mathematics',
+    chapter: '01. Mathematical Logic',
+    category: 'notes',
+    description: '100% Guaranteed 8-mark booster: Truth tables, Tautology vs Contradiction, Negation of compound statements, and switching circuit design without losing a single board mark.',
+    pdfUrl: 'https://storage.googleapis.com/sbw-notes/hsc12_math_ch01_logic.pdf',
+    thumbnailUrl: '/src/assets/images/hero_sbw_study_1790694754398.jpg',
+    isPremium: false,
+    pages: 10,
+    isPublished: true,
+    createdAt: '2026-03-01',
+    updatedAt: '2026-03-10',
+    readTimeMinutes: 14,
+    downloadsCount: 1890,
+    sampleContent: {
+      keyPoints: [
+        'Statements: Declarative sentences that are either True (T) or False (F), not both.',
+        'Logical Connectives: Conjunction (∧), Disjunction (∨), Implication (p → q), Biconditional (p ↔ q).',
+        'Truth table definitions: p → q is false ONLY when p is T and q is F.',
+        'Tautology (all T), Contradiction / Fallacy (all F), Contingency (mixed).',
+        'Negations: ~(p ∧ q) ≡ ~p ∨ ~q; ~(p ∨ q) ≡ ~p ∧ ~q (De Morgan’s Laws).',
+        'Negation of conditional: ~(p → q) ≡ p ∧ ~q.',
+        'Switching Circuits: Switches in series correspond to (∧), parallel corresponds to (∨).',
+      ],
+      formulaeSheet: [
+        'Converse of p → q is q → p',
+        'Inverse of p → q is ~p → ~q',
+        'Contrapositive of p → q is ~q → ~p',
+        'Duals: Replace ∧ with ∨, ∨ with ∧, T with c, c with T',
+        'p → q ≡ ~p ∨ q',
+        'p ↔ q ≡ (p → q) ∧ (q → p)',
+      ],
+      pyqExamHits: [
+        { year: 'March 2024', question: 'Construct truth table and verify whether (p ∧ q) ∨ (~p ∧ q) is a contingency.', marks: 3 },
+        { year: 'July 2023', question: 'Express the given switching circuit in symbolic form and simplify.', marks: 4 },
+        { year: 'March 2022', question: 'Write the converse, inverse and contrapositive of: If a triangle is equilateral then it is equiangular.', marks: 3 },
+      ],
+      summaryNotes: `Mathematical Logic is the quickest full-marks chapter in HSC Mathematics. No student should lose marks here. Double check your column headers in truth tables: p, q, ~p, ~q, compound terms, and final expression. Always conclude with a neat closing sentence such as "Since all entries in the final column are T, the given expression is a Tautology."`,
+      practiceMcqs: [
+        {
+          id: 'mcq-log-1',
+          question: 'The negation of the statement "p → q" is logically equivalent to:',
+          options: ['~p → ~q', 'p ∧ ~q', '~p ∧ q', 'p ∨ ~q'],
+          answerIndex: 1,
+          explanation: 'Since p → q ≡ ~p ∨ q, its negation ~(~p ∨ q) ≡ ~(~p) ∧ ~q ≡ p ∧ ~q.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'note-math-02',
+    title: 'Differentiation & Applications: Board Theorems & Maxima-Minima',
+    class: '12',
+    subject: 'mathematics',
+    chapter: '03. Differentiation',
+    category: 'important_questions',
+    description: 'HSC Board Calculus Backbone: Chain rule, logarithmic differentiation, derivative of inverse trigonometric functions, Rolle’s theorem and Lagrange’s Mean Value Theorem step solutions.',
+    pdfUrl: 'https://storage.googleapis.com/sbw-notes/hsc12_math_ch03_diff.pdf',
+    thumbnailUrl: '/src/assets/images/hero_sbw_study_1790694754398.jpg',
+    isPremium: true,
+    pages: 22,
+    isPublished: true,
+    createdAt: '2026-03-06',
+    updatedAt: '2026-03-24',
+    readTimeMinutes: 30,
+    downloadsCount: 1350,
+    sampleContent: {
+      keyPoints: [
+        'Derivative of composite functions: dy/dx = (dy/du) · (du/dx).',
+        'Inverse trigonometric derivatives: d/dx(sin⁻¹ x) = 1/√(1 - x²), etc.',
+        'Logarithmic differentiation for f(x)^g(x) and complex products/quotients.',
+        'Parametric differentiation: dy/dx = (dy/dt) / (dx/dt).',
+        'Higher order derivatives: d²y/dx².',
+        'Geometric application: Slope of tangent m = dy/dx, slope of normal = -1/m.',
+        'Approximations: f(a + h) ≈ f(a) + h · f’(a).',
+      ],
+      formulaeSheet: [
+        'd/dx (tan⁻¹ x) = 1 / (1 + x²)',
+        'd/dx (sec⁻¹ x) = 1 / (|x| √(x² - 1))',
+        'Tangent equation: (y - y₁) = m (x - x₁)',
+        'Normal equation: (y - y₁) = (-1/m) (x - x₁)',
+        'Rate of change: dA/dt = 2πr · (dr/dt)',
+        'Maxima/Minima: f’(x) = 0, if f’’(x) < 0 then Maximum; if f’’(x) > 0 then Minimum',
+      ],
+      pyqExamHits: [
+        { year: 'March 2024', question: 'If y = (tan⁻¹ x)², prove that (1 + x²)² y₂ + 2x(1 + x²) y₁ = 2.', marks: 4 },
+        { year: 'March 2023', question: 'Find maximum and minimum values of f(x) = 2x³ - 15x² + 36x + 1.', marks: 4 },
+      ],
+      summaryNotes: `Differentiation carries up to 9 marks including options. The proof of inverse derivative theorem dy/dx = 1 / (dx/dy) is an essential 3-mark state and prove question. Make sure to define the domain of the function in your opening lines.`,
+      practiceMcqs: [
+        {
+          id: 'mcq-diff-1',
+          question: 'If y = e^(sin⁻¹ x), then (1 - x²) (d²y/dx²) - x (dy/dx) is equal to:',
+          options: ['0', 'y', '-y', '2y'],
+          answerIndex: 1,
+          explanation: 'Differentiating y = e^(sin⁻¹ x) gives dy/dx = y / √(1 - x²). Cross-multiplying and squaring or differentiating again directly yields (1 - x²) y₂ - x y₁ = y.',
+        },
+      ],
+    },
+  },
+  {
+    id: 'note-bio-01',
+    title: 'Reproduction in Plants: Microsporogenesis & Double Fertilization',
+    class: '12',
+    subject: 'biology',
+    chapter: '01. Reproduction in Lower and Higher Plants',
+    category: 'notes',
+    description: 'Fully illustrated Maharashtra State Board botany notes: Structure of Anatropous ovule, T.S. of Anther, Outbreeding devices, and significance of double fertilization.',
+    pdfUrl: 'https://storage.googleapis.com/sbw-notes/hsc12_bio_ch01_plant_repro.pdf',
+    thumbnailUrl: '/src/assets/images/subject_biology_1790694797935.jpg',
+    isPremium: false,
+    pages: 15,
+    isPublished: true,
+    createdAt: '2026-03-03',
+    updatedAt: '2026-03-14',
+    readTimeMinutes: 19,
+    downloadsCount: 1510,
+    sampleContent: {
+      keyPoints: [
+        'Asexual reproduction: Fragmentation, Budding, Spore formation, and Vegetative propagation (natural & artificial).',
+        'Microsporogenesis: T.S. of Anther showing Epidermis, Endothecium, Middle layers, and nutritive Tapetum.',
+        'Pollen grain structure: Exine (sporopollenin) with germ pores, and Intine (cellulose & pectin).',
+        'Megasporogenesis: 7-celled, 8-nucleate Polygonum type embryo sac.',
+        'Anatropous Ovule components: Funicle, Hilum, Integuments, Nucellus, Micropyle, Chalaza, and Embryo sac.',
+        'Pollination mechanisms: Anemophily, Hydrophily, and Entomophily adaptations.',
+        'Double Fertilization: Syngamy (generative nucleus + egg → 2n zygote) and Triple Fusion (generative nucleus + secondary nucleus → 3n PEN).',
+      ],
+      formulaeSheet: [
+        'Pollen Mother Cell (2n) → 4 Microspores (n) via Meiosis',
+        'Functional Megaspore (n) → 3 mitotic divisions → 8 nuclei, 7 cells',
+        'Syngamy: Male gamete (n) + Female gamete (n) = Zygote (2n)',
+        'Triple Fusion: Male gamete (n) + Secondary nucleus (2n) = PEN (3n)',
+      ],
+      pyqExamHits: [
+        { year: 'March 2024', question: 'Sketch and label Anatropous ovule and explain any four parts.', marks: 4 },
+        { year: 'July 2023', question: 'Describe any three outbreeding devices that encourage cross-pollination.', marks: 3 },
+        { year: 'March 2022', question: 'Explain significance of double fertilization in angiosperms.', marks: 3 },
+      ],
+      summaryNotes: `Reproduction in Plants is the cornerstone of Maharashtra HSC Botany. Every year, either the Anatropous Ovule diagram or the T.S. of Anther diagram appears for 3 or 4 marks. In labeling, ensure correct spelling of 'Micropyle', 'Chalaza', and 'Filiform apparatus'.`,
+      practiceMcqs: [
+        {
+          id: 'mcq-bio-1',
+          question: 'The primary endosperm nucleus (PEN) in angiosperms is formed by the fusion of:',
+          options: [
+            'One male gamete with egg cell',
+            'One male gamete with two polar nuclei',
+            'Two male gametes with one polar nucleus',
+            'Two polar nuclei only',
+          ],
+          answerIndex: 1,
+          explanation: 'Triple fusion involves the second haploid male gamete (n) fusing with the diploid secondary nucleus (2n) formed by two polar nuclei, resulting in a triploid PEN (3n).',
+        },
+      ],
+    },
+  },
+  {
+    id: 'note-bio-02',
+    title: 'Molecular Basis of Inheritance: DNA Replication & Genetic Code',
+    class: '12',
+    subject: 'biology',
+    chapter: '04. Molecular Basis of Inheritance',
+    category: 'revision',
+    description: 'High scoring chapter summary: Griffith, Avery-MacLeod-McCarty, Hershey-Chase experiment, semi-conservative DNA replication mechanism, and Lac Operon model in E. coli.',
+    pdfUrl: 'https://storage.googleapis.com/sbw-notes/hsc12_bio_ch04_molecular.pdf',
+    thumbnailUrl: '/src/assets/images/subject_biology_1790694797935.jpg',
+    isPremium: true,
+    pages: 18,
+    isPublished: true,
+    createdAt: '2026-03-05',
+    updatedAt: '2026-03-20',
+    readTimeMinutes: 22,
+    downloadsCount: 1290,
+    sampleContent: {
+      keyPoints: [
+        'Experimental Proof of DNA: Griffith’s transformation (S-strain and R-strain), Hershey-Chase blender experiment using ³²P and ³⁵S isotopes.',
+        'DNA Packaging: Nucleosome model, Octamer of histones (H2A, H2B, H3, H4) with 200 bp of DNA and H1 linker histone.',
+        'DNA Replication: Semi-conservative (Meselson and Stahl experiment using ¹⁵N and ¹⁴N).',
+        'Enzymes involved: Helicase (unwinding), SSBP (stabilizing), RNA Primase, DNA Polymerase III (5’ to 3’ synthesis), DNA Ligase (Okazaki fragments).',
+        'Central Dogma: Replication → Transcription (mRNA) → Translation (Protein).',
+        'Genetic Code Characteristics: Triplet, Comma-less, Degenerate, Non-overlapping, Universal, Initiation codon (AUG), Stop codons (UAA, UAG, UGA).',
+        'Lac Operon: Regulatory gene (i), Promoter (p), Operator (o), Structural genes (z, y, a) encoding β-galactosidase, permease, and transacetylase.',
+      ],
+      formulaeSheet: [
+        'Chargaff’s Rule: A + G = T + C and A/T = G/C = 1',
+        'One complete helical turn of B-DNA = 3.4 nm (10 base pairs, 0.34 nm pitch)',
+        'Lac z gene → β-galactosidase; Lac y gene → Permease; Lac a gene → Transacetylase',
+      ],
+      pyqExamHits: [
+        { year: 'March 2024', question: 'Explain Hershey-Chase experiment with a neat labeled schematic diagram.', marks: 4 },
+        { year: 'March 2023', question: 'Describe the structure of a nucleosome with suitable diagram.', marks: 3 },
+      ],
+      summaryNotes: `Molecular Biology carries 6 to 8 marks. The Lac Operon diagram (switching off and on by allolactose inducer) and the Replication Fork diagram must be practiced until you can draw them in under 2 minutes. State clearly why lagging strand synthesis is discontinuous (forming Okazaki fragments).`,
+      practiceMcqs: [
+        {
+          id: 'mcq-mol-1',
+          question: 'Which of the following codons acts as the universal initiation codon for protein synthesis?',
+          options: ['UAA', 'AUG', 'UGA', 'UAG'],
+          answerIndex: 1,
+          explanation: 'AUG codes for Methionine in eukaryotes (and formyl-methionine in prokaryotes) and serves as the initiator codon for translation.',
+        },
+      ],
+    },
+  },
+];
+
+export const INITIAL_USER: User = {
+  id: 'usr_student_01',
+  name: 'Aaditya Shinde',
+  email: 'shindeaaditya636@gmail.com',
+  role: 'student',
+  premiumStatus: false,
+  purchasedItems: [],
+  bookmarks: ['note-phy-01', 'note-chem-01'],
+  recentNotes: [
+    { noteId: 'note-phy-01', viewedAt: '2026-03-28T10:14:00Z' },
+    { noteId: 'note-chem-01', viewedAt: '2026-03-27T15:20:00Z' },
+  ],
+  studyStreakDays: 5,
+  completedChapters: ['01. Rotational Dynamics', '01. Mathematical Logic'],
+};
+
+export const ADMIN_USER: User = {
+  id: 'usr_admin_01',
+  name: 'Prof. Shelar Sir',
+  email: 'admin@shelarboardwalla.com',
+  role: 'admin',
+  premiumStatus: true,
+  premiumExpiresAt: '2030-12-31',
+  purchasedItems: ['all_access_vip'],
+  bookmarks: ['note-phy-01', 'note-phy-02', 'note-math-02'],
+  recentNotes: [{ noteId: 'note-phy-02', viewedAt: '2026-03-29T08:00:00Z' }],
+  studyStreakDays: 140,
+  completedChapters: [],
+};

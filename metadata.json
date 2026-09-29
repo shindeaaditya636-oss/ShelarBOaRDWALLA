@@ -1,0 +1,6 @@
+{
+  "name": "ShelarBoardWalla",
+  "description": "Maharashtra State Board Class 11th & 12th Science smart notes, PYQs, and HSC exam preparation platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
